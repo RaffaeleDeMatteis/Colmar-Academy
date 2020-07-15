@@ -51,6 +51,10 @@ header #logocontainer {
     font-size: 1.4rem;
 }
 
+#oncampus, #online, #logincontainer {
+    display: none;
+}
+
 header nav {
     float: right;
 }
@@ -64,21 +68,24 @@ header nav a {
     min-height: 4rem;
 }
 
+.banner * {
+    margin: 0;
+}
+
 .banner {
     background-color: lightgrey;
     color: hsl(0,0%,30%);
     overflow: auto;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    margin: 0;
-    float: left;
+    padding: 2rem 1.5rem;
 }
 
 .banner .img-container {
-    margin: 2rem 1.5rem;
-    min-width: 60%;
+    width: 60%;
     float: left;
     overflow: hidden;
 }
@@ -89,26 +96,28 @@ header nav a {
 }
 
 .banner .start {
-    max-width: calc(40% - 3rem);
+    width: 40%;
     padding: 1%;
-    margin-right: 3rem;
+    padding-right: calc(1% + 1.5rem);
+    padding-left: calc(1% + 0.5rem);
 }
 
 .banner h2 {
+    padding: 2rem 0;
     line-height: 1;
     font-size: 3rem;
 }
 
 .banner p {
+    padding: 1rem 0;
     font-weight: bold;
 }
 
 .banner button {
-    margin-top: 1rem;
     background-color: dimgray;
     border: none;
     color: white;
-    padding: 1rem;
+    padding: 2rem 1rem 2rem 1rem;
     font-size: 1.75rem;
     width: 100%;
     transition: all 0.6s linear;
@@ -120,17 +129,21 @@ header nav a {
     font-size: 2rem;
 }
 
+.info * {
+    margin: 0;
+}
+
 .info {
     background-color: transparent;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     clear: left;
     width: 100%;
 }
 
 .info section {
-    margin: 0 1.5rem;
-    padding: 2rem 0;
+    padding: 2rem 1.5rem;
     width: 60%;
     color: hsl(0,0%,30%);
 
@@ -162,7 +175,7 @@ header nav a {
 .info aside {
     padding: 2rem 0;
     border-left: solid 1px lightgray;
-    max-width: calc(40% - 3rem);
+    width: 40%;
 }
 
 .info aside .section {
@@ -171,7 +184,7 @@ header nav a {
 }
 
 .info aside .img-container {
-    min-width: calc(35% - 1rem);
+    min-width: 35%;
     overflow: hidden;
     display: inline-block;
     padding: 1rem;
@@ -188,6 +201,7 @@ header nav a {
 }
 
 .info h4 {
+    padding-top: 5%;
     margin-bottom: 0;
     line-height: 1;
 }
@@ -224,6 +238,7 @@ header nav a {
     padding: 2rem 3.5rem;
     color: dimgray;
     margin: 0 auto;
+    width: 100%;
 }
 
 .gallery {
@@ -234,9 +249,13 @@ header nav a {
     justify-content: space-between;
 }
 
+.gallery .sectioncontainer {
+    width: 33%;
+    padding: 0 1rem 2rem 1rem;
+}
+
 .gallery .section {
-    max-width: calc(33% - 4rem);
-    margin: 0 1rem 2rem 1rem;
+    width: 100%;
     background-color: white;
 }
 
@@ -280,6 +299,7 @@ header nav a {
 
 .thesis .content {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .info section .video-container {
@@ -310,4 +330,23 @@ footer nav a {
     margin: auto 0.5rem;
     text-decoration: none;
     color: dimgray;
+}
+
+@media only screen and (max-width: 760px) {
+    #oncampus, #online, #logincontainer {
+        display: inline-block;
+    }
+
+    header nav, #logocontainer span {
+        display: none;
+    }   
+
+    .banner {
+        flex-direction: column;
+        padding-left: 1rem;
+    }
+
+    .banner div {
+        width: 100%;
+    }
 }
