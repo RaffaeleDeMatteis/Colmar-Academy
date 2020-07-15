@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    background-color: white;
+    font-family: Sora, sans-serif;
+}
+
+body {
+    margin: 0;
+    border-left: 1px solid dimgray;
+    border-right: 1px solid dimgray;
+}
+
+header {
+    margin: 0;
+    height: 4rem;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+header #logocontainer {
+    margin: auto 0.5rem;
+    position: relative;
+    float: left;
+    height: 2rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#logocontainer img {
+    max-height: 100%;
+    width: auto;
+}
+
+#logocontainer span {
+    font-size: 1.4rem;
+}
+
+header nav {
+    float: right;
+}
+
+header nav a {
+    text-decoration: none;
+    margin: auto 0.5rem;
+}
+
+.clearfix {
+    min-height: 4rem;
+}
+
+.banner {
+    background-color: lightgrey;
+    color: hsl(0,0%,30%);
+    overflow: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    float: left;
+}
+
+.banner .img-container {
+    margin: 2rem 1.5rem;
+    min-width: 60%;
+    float: left;
+    overflow: hidden;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner .start {
+    max-width: calc(40% - 3rem);
+    padding: 1%;
+    margin-right: 3rem;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.banner p {
+    font-weight: bold;
+}
+
+.banner button {
+    background-color: dimgray;
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: 1.75rem;
+    width: 100%;
+}
+
+.info {
+    background-color: transparent;
+    padding: 2rem 0 0 0;
+    display: flex;
+    align-items: flex-start;
+    clear: left;
+    width: 100%;
+}
+
+.info section {
+    margin: 0 1.5rem 2rem 1.5rem;
+    width: 60%;
+    color: hsl(0,0%,30%);
+
+}
+
+.info section .img-container {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.info img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info blockquote {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.info cite {
+    font-size: 1.2rem;
+    font-style: normal;
+}
+
+.info aside {
+    border-left: solid 1px lightgray;
+    max-width: calc(40% - 3rem);
+}
+
+.info aside .section {
+    transition: background-color 0.8s ease-in-out 0.2s;
+    display: flex;
+}
+
+.info aside .img-container {
+    min-width: calc(35% - 1rem);
+    overflow: hidden;
+    display: inline-block;
+    padding: 1rem;
+}
+
+.info aside .description {
+    width: 65%;
+    padding: 2%;
+}
+
+.info a {
+    text-decoration: none;
+    display: block;
+}
+
+.info h3 {
+    font-size: 2.5rem;
+}
+
+.info h4 {
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.info span {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.top {
+    border-bottom: 1px solid lightgray;
+}
+
+.middle {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.bottom {
+    border-top: 1px solid lightgray;
+}
+
+.info .section:hover {
+    background-color: lightgray;
+}
+
